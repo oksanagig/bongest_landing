@@ -8,8 +8,8 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#eceae4">
   <link rel="canonical" href="https://bongest.ch/">
-  <link rel="icon" href="assets/favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="assets/logo-square.png">
+  <link rel="icon" href="assets/favicon.ico?v=20260413-2" sizes="any">
+  <link rel="apple-touch-icon" href="assets/logo-square.png?v=20260413-2">
 
   <meta property="og:locale" content="fr_CH">
   <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
   <meta property="og:title" content="BonGest — Intelligence pour les entreprises du bâtiment">
   <meta property="og:description" content="Chaque jour entre le chantier et la facture, c'est de la marge qui dort. Vos rapports partent le jour même. Vos factures aussi.">
   <meta property="og:url" content="https://bongest.ch/">
-  <meta property="og:image" content="https://bongest.ch/assets/logo-bongest.png">
+  <meta property="og:image" content="https://bongest.ch/assets/logo-bongest.png?v=20260413-2">
   <meta property="og:image:width" content="1224">
   <meta property="og:image:height" content="380">
   <meta property="og:image:alt" content="Logo BonGest">
@@ -25,7 +25,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="BonGest — Intelligence pour les entreprises du bâtiment">
   <meta name="twitter:description" content="Chaque jour entre le chantier et la facture, c'est de la marge qui dort. Vos rapports partent le jour même. Vos factures aussi.">
-  <meta name="twitter:image" content="https://bongest.ch/assets/logo-bongest.png">
+  <meta name="twitter:image" content="https://bongest.ch/assets/logo-bongest.png?v=20260413-2">
   <meta name="twitter:image:alt" content="Logo BonGest">
 
   <script type="application/ld+json">
@@ -34,7 +34,7 @@
       "@type": "Organization",
       "name": "BonGest",
       "url": "https://bongest.ch/",
-      "logo": "https://bongest.ch/assets/logo-bongest.png",
+      "logo": "https://bongest.ch/assets/logo-bongest.png?v=20260413-2",
       "email": "contact@bongest.ch",
       "areaServed": "Romandie",
       "address": {
@@ -111,6 +111,8 @@
       margin-inline: auto;
     }
 
+    /* ── Header ── */
+
     header {
       position: relative;
       z-index: 10;
@@ -128,7 +130,7 @@
     }
 
     .header-inner {
-      padding: 2rem 0;
+      padding: 1.6rem 0; /* slightly tighter to accommodate taller logo */
     }
 
     .logo,
@@ -138,10 +140,11 @@
       text-decoration: none;
     }
 
+    /* Fix 5 — Logo +40%: 52px → 73px */
     .logo img {
       display: block;
       width: auto;
-      height: 52px;
+      height: 73px;
     }
 
     .location-tag {
@@ -153,16 +156,19 @@
       white-space: nowrap;
     }
 
+    /* ── Main / Hero ── */
+
     main {
       display: flex;
       flex: 1;
+      flex-direction: column;
     }
 
     #hero {
       position: relative;
       z-index: 1;
       flex: 1;
-      padding: clamp(5.5rem, 9vw, 8.5rem) 0 clamp(4rem, 7vw, 6.5rem);
+      padding: clamp(5.5rem, 9vw, 8.5rem) 0 0;
     }
 
     .hero-inner {
@@ -171,8 +177,10 @@
       width: 100%;
     }
 
+    /* Fix 6 — hero-copy fills full container width, left-aligned */
     .hero-copy {
-      width: min(100%, 1240px);
+      width: 100%;
+      text-align: left;
     }
 
     .eyebrow {
@@ -207,6 +215,7 @@
       color: var(--navy);
       max-width: 14ch;
       text-wrap: balance;
+      text-align: left;
       opacity: 0;
       animation: up 0.85s ease 0.3s forwards;
     }
@@ -216,36 +225,57 @@
       color: var(--orange);
     }
 
-    .subline {
+    /* Fix 1+2 — Solution text as prominent second headline */
+    .solution-line {
       margin-top: 2.2rem;
-      font-size: 1.05rem;
-      font-weight: 300;
-      color: var(--navy-mid);
-      max-width: 56ch;
-      line-height: 1.75;
+      font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+      font-weight: 500;
+      color: var(--green);
+      line-height: 1.5;
+      text-align: left;
+      width: 100%; /* Fix 6 — no max-width constraint */
       opacity: 0;
       animation: up 0.85s ease 0.45s forwards;
     }
 
-    .future {
-      display: block;
-      margin-top: 0.85rem;
+    /* Subline: only the "Et bientôt…" future detail — lighter, smaller */
+    .subline {
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: 300;
       color: var(--navy-light);
+      line-height: 1.75;
+      text-align: left;
+      width: 100%; /* Fix 6 — no max-width constraint */
+      opacity: 0;
+      animation: up 0.85s ease 0.55s forwards;
+    }
+
+    /* ── CTA band — Fix 4: full-width contrasting dark section ── */
+
+    .cta-band {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      background: var(--navy);
+      padding: clamp(3rem, 6vw, 5rem) 0 clamp(3rem, 6vw, 5rem);
+      margin-top: clamp(3rem, 6vw, 5rem);
     }
 
     .rule {
       width: 48px;
       height: 2px;
       background: var(--orange);
-      margin: 3rem 0;
+      margin: 0 0 3rem 0;
       opacity: 0;
-      animation: up 0.8s ease 0.55s forwards;
+      animation: up 0.8s ease 0.65s forwards;
     }
 
     .cta-block {
+      width: 100%; /* Fix 6 — no max-width constraint */
+      text-align: left;
       opacity: 0;
-      animation: up 0.85s ease 0.65s forwards;
-      max-width: 50ch;
+      animation: up 0.85s ease 0.75s forwards;
     }
 
     .cta-label {
@@ -253,40 +283,43 @@
       font-weight: 500;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--navy-light);
+      color: rgba(250, 248, 244, 0.5);
       margin-bottom: 0.9rem;
     }
 
+    /* Fix 6 — cta-line: no max-width, full width, left-aligned */
     .cta-line {
       font-family: "Playfair Display", serif;
       font-size: clamp(1.1rem, 2vw, 1.45rem);
       font-style: italic;
-      color: var(--navy);
+      color: var(--white);
       margin-bottom: 2rem;
-      max-width: 42ch;
+      width: 100%;
       line-height: 1.45;
+      text-align: left;
     }
 
+    /* Fix 3 — CTA button: larger, more prominent */
     .btn {
       display: inline-block;
       background: var(--orange);
       color: #fff;
       font-family: "Outfit", sans-serif;
-      font-size: 0.78rem;
+      font-size: 0.9rem;
       font-weight: 500;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       text-decoration: none;
-      padding: 1rem 2.6rem;
+      padding: 1.1rem 3rem;
       border-radius: 2px;
       transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-      box-shadow: 0 2px 16px var(--orange-shadow);
+      box-shadow: 0 2px 20px var(--orange-shadow);
     }
 
     .btn:hover {
       background: #d45c15;
       transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(232, 104, 26, 0.3);
+      box-shadow: 0 6px 28px rgba(232, 104, 26, 0.35);
     }
 
     .btn-note {
@@ -294,18 +327,20 @@
       margin-top: 1.1rem;
       font-size: 0.74rem;
       font-weight: 400;
-      color: var(--navy-light);
+      color: rgba(250, 248, 244, 0.5);
       letter-spacing: 0.04em;
       text-decoration: none;
-      border-bottom: 1px solid rgba(74, 112, 144, 0.35);
+      border-bottom: 1px solid rgba(250, 248, 244, 0.25);
       padding-bottom: 2px;
       transition: color 0.2s ease, border-color 0.2s ease;
     }
 
     .btn-note:hover {
-      color: var(--navy);
-      border-color: rgba(26, 58, 86, 0.5);
+      color: var(--white);
+      border-color: rgba(250, 248, 244, 0.6);
     }
+
+    /* ── Footer ── */
 
     footer {
       position: relative;
@@ -365,19 +400,13 @@
         padding: 1.6rem 0;
       }
 
+      /* Fix 5 — Logo +40% mobile: 46px → 64px */
       .logo img {
-        height: 46px;
+        height: 64px;
       }
 
       #hero {
-        padding: 4.75rem 0 4rem;
-      }
-
-      .hero-copy,
-      h1,
-      .subline,
-      .cta-block {
-        max-width: 100%;
+        padding: 4.75rem 0 0;
       }
 
       .location-tag,
@@ -392,6 +421,7 @@
         font-size: clamp(2.4rem, 12vw, 3.6rem);
       }
 
+      /* Fix 3 — Full-width button on small screens */
       .btn {
         width: 100%;
         text-align: center;
@@ -419,7 +449,7 @@
     <div class="shell header-inner">
       <a href="index.html" class="logo" aria-label="BonGest — accueil">
         <img
-          src="assets/logo-bongest.png"
+          src="assets/logo-bongest.png?v=20260413-2"
           alt="BonGest"
           width="1224"
           height="380"
@@ -441,13 +471,22 @@
             <em>c'est de la marge qui dort.</em>
           </h1>
 
-          <p class="subline">
+          <!-- Fix 1+2 — Solution as prominent second headline -->
+          <p class="solution-line">
             Vos rapports partent le jour même. Vos factures aussi.
-            <span class="future">Et bientôt, vous saurez exactement sur quel chantier vous gagnez&nbsp;— et sur lequel vous perdez.</span>
           </p>
 
-          <div class="rule" role="presentation"></div>
+          <!-- Subline: lighter future detail -->
+          <p class="subline">
+            Et bientôt, vous saurez exactement sur quel chantier vous gagnez&nbsp;— et sur lequel vous perdez.
+          </p>
+        </div>
+      </div>
 
+      <!-- Fix 4 — Contrasting dark CTA band -->
+      <div class="cta-band">
+        <div class="shell">
+          <div class="rule" role="presentation"></div>
           <div class="cta-block">
             <p class="cta-label">Entreprises du bâtiment&nbsp;·&nbsp;Genève</p>
             <p class="cta-line">Nous construisons BonGest avec un premier groupe d'entreprises&nbsp;— pas pour elles, avec elles. Si vous lisez ceci, c'est probablement le bon moment.</p>
@@ -462,7 +501,7 @@
     <div class="shell footer-inner">
       <a href="index.html" class="footer-logo" aria-label="BonGest — accueil">
         <img
-          src="assets/logo-bongest.png"
+          src="assets/logo-bongest.png?v=20260413-2"
           alt="BonGest"
           width="1224"
           height="380"
