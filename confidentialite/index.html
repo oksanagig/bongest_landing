@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — BonGest</title>
+  <meta name="description" content="Politique de confidentialité du site bongest.ch, édité par Venidora SA à Genève.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#eceae4">
+  <link rel="canonical" href="https://bongest.ch/confidentialite/">
+  <link rel="icon" href="../assets/favicon.ico?v=20260413-2" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/logo-square.png?v=20260413-2">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #eceae4;
+      --bg-dark: #e2dfd8;
+      --navy: #1a3a56;
+      --navy-light: #4a7090;
+      --orange: #e8681a;
+      --border: rgba(26, 58, 86, 0.12);
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--navy);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(26, 58, 86, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26, 58, 86, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 4px;
+    }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+      width: min(100% - 3rem, 900px);
+      margin-inline: auto;
+    }
+
+    header,
+    footer {
+      position: relative;
+      z-index: 1;
+      border-color: var(--border);
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(236, 234, 228, 0.9);
+    }
+
+    .header-inner,
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.4rem 0;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      display: block;
+      width: auto;
+      height: 56px;
+    }
+
+    .back-link,
+    .footer-meta {
+      color: var(--navy-light);
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--navy);
+    }
+
+    main {
+      padding: clamp(3rem, 7vw, 5rem) 0;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.25rem, 6vw, 4rem);
+      line-height: 1.08;
+      margin-bottom: clamp(2.5rem, 6vw, 4rem);
+    }
+
+    section + section {
+      margin-top: 2.25rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
+    }
+
+    p,
+    li {
+      color: var(--navy-light);
+      font-size: 1rem;
+      max-width: 72ch;
+    }
+
+    p + p,
+    ul + p {
+      margin-top: 0.8rem;
+    }
+
+    address {
+      color: var(--navy-light);
+      font-style: normal;
+      margin: 0.8rem 0;
+    }
+
+    ul {
+      margin: 0.8rem 0 0 1.1rem;
+    }
+
+    .intro {
+      margin-bottom: 2rem;
+    }
+
+    .updated {
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+    }
+
+    footer {
+      background: var(--bg-dark);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 640px) {
+      .shell {
+        width: min(100% - 2rem, 900px);
+      }
+
+      .header-inner,
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell header-inner">
+      <a href="../" class="logo" aria-label="BonGest — accueil">
+        <img
+          src="../assets/logo-bongest.png?v=20260413-2"
+          alt="BonGest"
+          width="1224"
+          height="380"
+          loading="eager"
+          decoding="async">
+      </a>
+      <a href="../" class="back-link">Retour à l'accueil</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="shell">
+      <p class="eyebrow">bongest.ch</p>
+      <h1>Politique de confidentialité</h1>
+
+      <div class="intro">
+        <p>Cette politique explique comment les données personnelles peuvent être traitées lorsque vous consultez le site public bongest.ch.</p>
+        <p>Le site bongest.ch est un site vitrine. Il ne contient pas de formulaire de contact, d'espace membre, d'inscription, de newsletter ou de système de paiement.</p>
+      </div>
+
+      <section>
+        <h2>1. Responsable du traitement</h2>
+        <p>Le responsable du traitement est :</p>
+        <address>
+          Venidora SA<br>
+          Rue du Mont-Blanc 5<br>
+          1201 Genève<br>
+          Suisse
+        </address>
+        <p>Contact : <a href="mailto:contact@bongest.ch">contact@bongest.ch</a></p>
+      </section>
+
+      <section>
+        <h2>2. Données traitées</h2>
+        <p>Nous ne collectons pas directement de données personnelles via ce site.</p>
+        <p>Lorsque vous consultez bongest.ch, certaines données techniques peuvent toutefois être traitées automatiquement par les prestataires nécessaires au fonctionnement du site, notamment :</p>
+        <ul>
+          <li>adresse IP</li>
+          <li>date et heure de la visite</li>
+          <li>page consultée</li>
+          <li>type de navigateur et informations techniques similaires</li>
+        </ul>
+        <p>Ces données sont nécessaires pour afficher le site, assurer sa sécurité et maintenir son bon fonctionnement.</p>
+        <p>Si vous nous contactez par e-mail, nous traitons les informations que vous nous transmettez volontairement, notamment votre adresse e-mail, votre nom le cas échéant, et le contenu de votre message.</p>
+      </section>
+
+      <section>
+        <h2>3. Finalités du traitement</h2>
+        <p>Les données techniques sont traitées afin de :</p>
+        <ul>
+          <li>permettre l'affichage du site</li>
+          <li>assurer la sécurité et la stabilité du site</li>
+          <li>prévenir les abus ou incidents techniques</li>
+        </ul>
+        <p>Les données transmises par e-mail sont traitées afin de répondre à votre demande et d'assurer le suivi de nos échanges.</p>
+      </section>
+
+      <section>
+        <h2>4. Prestataires techniques et transferts à l'étranger</h2>
+        <p>Le site public bongest.ch est hébergé via GitHub Pages, un service fourni par GitHub.</p>
+        <p>GitHub peut traiter des données techniques nécessaires à l'affichage, à la sécurité et à la maintenance du site. Ces données peuvent être traitées dans des pays situés en dehors de la Suisse, notamment aux États-Unis.</p>
+        <p>Lorsque cela est nécessaire, ces traitements sont fondés sur des mécanismes reconnus de protection des données, tels que des décisions d'adéquation, des clauses contractuelles types ou d'autres garanties prévues par la loi applicable.</p>
+      </section>
+
+      <section>
+        <h2>5. Cookies et mesure d'audience</h2>
+        <p>À notre connaissance, le site bongest.ch ne dépose pas de cookies sur votre appareil.</p>
+        <p>Nous n'utilisons pas Google Analytics, de pixel publicitaire, de retargeting ou d'outil de mesure d'audience tiers sur ce site vitrine.</p>
+        <p>Si nous intégrons ultérieurement des outils de mesure d'audience ou des cookies non nécessaires, cette politique sera mise à jour et, si requis, un mécanisme de consentement sera ajouté.</p>
+      </section>
+
+      <section>
+        <h2>6. Vos droits</h2>
+        <p>Conformément à la loi fédérale suisse sur la protection des données, vous pouvez notamment demander l'accès aux données personnelles vous concernant, leur rectification, leur suppression ou la limitation de leur traitement, dans les limites prévues par la loi.</p>
+        <p>Vous pouvez exercer vos droits ou poser toute question relative à la protection des données en nous contactant à :</p>
+        <p><a href="mailto:contact@bongest.ch">contact@bongest.ch</a></p>
+      </section>
+
+      <section>
+        <h2>7. Liens vers des sites tiers</h2>
+        <p>Ce site peut contenir des liens vers des sites tiers.</p>
+        <p>Venidora SA n'exerce aucun contrôle sur ces sites et n'est pas responsable de leurs contenus ni de leurs pratiques en matière de protection des données.</p>
+      </section>
+
+      <section>
+        <h2>8. Mise à jour</h2>
+        <p>Cette politique peut être modifiée si le site évolue ou si nos pratiques changent.</p>
+      </section>
+
+      <p class="updated">Dernière mise à jour : avril 2026</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <span class="footer-meta">Venidora SA · Rue du Mont-Blanc 5 · 1201 Genève · Suisse</span>
+      <span class="footer-meta"><a href="mailto:contact@bongest.ch">contact@bongest.ch</a></span>
+    </div>
+  </footer>
+</body>
+</html>
