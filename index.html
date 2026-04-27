@@ -361,6 +361,17 @@
       text-align: right;
     }
 
+    .footer-meta a {
+      text-decoration: none;
+      border-bottom: 1px solid rgba(74, 112, 144, 0.28);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .footer-meta a:hover {
+      color: var(--navy);
+      border-color: rgba(26, 58, 86, 0.5);
+    }
+
     @keyframes up {
       from {
         opacity: 0;
@@ -501,7 +512,7 @@
           loading="lazy"
           decoding="async">
       </a>
-      <span class="footer-meta">bongest.ch &nbsp;·&nbsp; Genève, Suisse &nbsp;·&nbsp; 2026</span>
+      <span class="footer-meta">bongest.ch &nbsp;·&nbsp; Genève, Suisse &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; <a href="mentions-legales/">Mentions légales</a></span>
     </div>
   </footer>
 </body>
