@@ -1,99 +1,62 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>Manuel BonGest</title>
-    <style>
-      :root {
-        color-scheme: light;
-        --background: #faf9f6;
-        --card: #ffffff;
-        --border: #e8e2d8;
-        --foreground: #2b4a5c;
-        --muted: #718396;
-        --primary: #f97316;
-        --secondary: #2b4a5c;
-      }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>BonGest</title>
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        var isWorkerRoute = path === "/worker" || path.indexOf("/worker/") === 0 || path.indexOf("/w/") === 0;
+        var metadata = isWorkerRoute
+          ? {
+              title: "BonGest Terrain",
+              description: "Application terrain pour techniciens BonGest",
+              manifest: "/worker-manifest.json",
+              theme: "#2f6a31",
+              icon: "/worker-icon-512.png",
+              icon192: "/worker-icon-192.png",
+              appleTitle: "Terrain"
+            }
+          : {
+              title: "BonGest",
+              description: "BonGest, gestion operationnelle pour entreprises de services sur le terrain.",
+              manifest: "/manifest.json",
+              theme: "#2e7d32",
+              icon: "/icon-512.png",
+              icon192: "/icon-192.png",
+              appleTitle: "BonGest"
+            };
 
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background: var(--background);
-        color: var(--foreground);
-        font-family: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      .card {
-        width: min(420px, calc(100vw - 32px));
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        background: var(--card);
-        padding: 28px;
-        text-align: center;
-        box-shadow: 0 10px 30px rgba(43, 74, 92, 0.08);
-      }
-
-      .lock {
-        width: 44px;
-        height: 44px;
-        display: inline-grid;
-        place-items: center;
-        border-radius: 999px;
-        background: var(--secondary);
-        color: white;
-      }
-
-      .brand {
-        margin: 22px auto 18px;
-        font-weight: 800;
-        font-size: 24px;
-        letter-spacing: 0;
-      }
-
-      .brand span:first-child {
-        color: var(--primary);
-      }
-
-      .brand span:last-child {
-        color: #3f8f3d;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: 20px;
-        line-height: 1.25;
-      }
-
-      p {
-        margin: 14px 0 0;
-        color: var(--muted);
-        font-size: 14px;
-        line-height: 1.55;
-      }
-    </style>
+        document.title = metadata.title;
+        document.write(
+          '<meta name="description" content="' + metadata.description + '">' +
+          '<link rel="manifest" href="' + metadata.manifest + '" id="app-manifest">' +
+          '<meta name="theme-color" content="' + metadata.theme + '">' +
+          '<meta name="mobile-web-app-capable" content="yes">' +
+          '<meta name="application-name" content="' + metadata.appleTitle + '">' +
+          '<meta name="apple-mobile-web-app-capable" content="yes">' +
+          '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">' +
+          '<meta name="apple-mobile-web-app-title" content="' + metadata.appleTitle + '">' +
+          '<link rel="icon" type="image/png" sizes="192x192" href="' + metadata.icon192 + '">' +
+          '<link rel="apple-touch-icon" sizes="512x512" href="' + metadata.icon + '">' +
+          '<meta name="author" content="BonGest">' +
+          '<meta property="og:type" content="website">' +
+          '<meta property="og:title" content="' + metadata.title + '">' +
+          '<meta property="og:description" content="' + metadata.description + '">' +
+          '<meta property="og:image" content="' + metadata.icon + '">' +
+          '<meta name="twitter:card" content="summary_large_image">' +
+          '<meta name="twitter:title" content="' + metadata.title + '">' +
+          '<meta name="twitter:description" content="' + metadata.description + '">' +
+          '<meta name="twitter:image" content="' + metadata.icon + '">'
+        );
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/main-BR7qWsyq.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-CNMGtfHj.css">
   </head>
+
   <body>
-    <main class="card" aria-labelledby="title">
-      <div class="lock" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-          <rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2" />
-          <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-        </svg>
-      </div>
-      <div class="brand"><span>Bon</span><span>Gest</span></div>
-      <h1 id="title">Accès réservé aux clients BonGest</h1>
-      <p>
-        Le manuel sera disponible depuis votre compte BonGest lorsque l'accès sera activé.
-        Cette page ne contient pas le contenu du manuel.
-      </p>
-    </main>
+    <div id="root"></div>
   </body>
 </html>
