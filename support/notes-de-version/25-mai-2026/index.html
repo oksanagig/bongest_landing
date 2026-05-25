@@ -204,7 +204,17 @@
 
     .feature-header {
       display: grid;
-      gap: 0.45rem;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: center;
+      gap: 0.45rem 0.85rem;
+    }
+
+    .feature-header h3 {
+      margin-bottom: 0;
+    }
+
+    .feature-header p {
+      grid-column: 1 / -1;
     }
 
     .number {
