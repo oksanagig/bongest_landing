@@ -259,6 +259,13 @@
       max-width: 360px;
     }
 
+    @media (min-width: 900px) {
+      .screenshot:not(.is-phone) {
+        width: 85%;
+        margin-inline: auto;
+      }
+    }
+
     .screenshot.is-missing .screenshot-frame {
       min-height: 220px;
       display: grid;
