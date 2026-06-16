@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Essentiel BonGest - semaine du 15 juin 2026</title>
+  <meta name="description" content="7 infos utiles pour les entreprises du batiment a Geneve et Vaud: PAC, OCIRT, appels d'offres, SIA 118, LATC et salaire minimum vaudois.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#eceae4">
+  <link rel="canonical" href="https://bongest.ch/digest/essentiel-bongest-15-06-2026/">
+  <link rel="icon" href="../../assets/favicon.ico?v=20260413-2" sizes="any">
+  <link rel="apple-touch-icon" href="../../assets/logo-square.png?v=20260413-2">
+
+  <meta property="og:locale" content="fr_CH">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BonGest">
+  <meta property="og:title" content="L'Essentiel BonGest - semaine du 15 juin 2026">
+  <meta property="og:description" content="PAC, OCIRT, appels d'offres, SIA 118, LATC et salaire minimum vaudois: les points utiles de la semaine pour les entreprises du batiment.">
+  <meta property="og:url" content="https://bongest.ch/digest/essentiel-bongest-15-06-2026/">
+  <meta property="og:image" content="https://bongest.ch/assets/logo-bongest.png?v=20260413-2">
+
+  <style>
+    @font-face {
+      font-family: "Outfit";
+      src: url("../../assets/fonts/Outfit-wght.ttf") format("truetype");
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Playfair Display";
+      src: url("../../assets/fonts/PlayfairDisplay-wght.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #eceae4;
+      --bg-dark: #e2dfd8;
+      --navy: #1a3a56;
+      --navy-mid: #2d5478;
+      --muted: #526e82;
+      --orange: #e8681a;
+      --white: #faf8f4;
+      --border: rgba(26, 58, 86, 0.14);
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--navy);
+      font-family: "Outfit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(26, 58, 86, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26, 58, 86, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: rgba(232, 104, 26, 0.45);
+      text-underline-offset: 0.2em;
+    }
+
+    a:hover {
+      color: var(--orange);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 4px;
+    }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+      width: min(100% - 3rem, 980px);
+      margin-inline: auto;
+    }
+
+    header {
+      position: relative;
+      z-index: 2;
+      border-bottom: 1px solid var(--border);
+      background: rgba(236, 234, 228, 0.92);
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner,
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 0;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      display: block;
+      width: auto;
+      height: 58px;
+    }
+
+    .section-label {
+      color: var(--muted);
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    main {
+      padding: clamp(3rem, 7vw, 5rem) 0 clamp(4rem, 8vw, 6rem);
+    }
+
+    .issue-kicker {
+      color: var(--orange);
+      font-size: 0.78rem;
+      font-weight: 650;
+      letter-spacing: 0.16em;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.35rem, 6vw, 4.9rem);
+      line-height: 1.04;
+      max-width: 12ch;
+      margin-bottom: 1.3rem;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: clamp(1.02rem, 2vw, 1.2rem);
+      max-width: 62ch;
+    }
+
+    .issue-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1.6rem;
+    }
+
+    .pill {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      padding: 0.4rem 0.7rem;
+    }
+
+    .digest-list {
+      margin-top: clamp(2.8rem, 6vw, 4rem);
+      border-top: 1px solid var(--border);
+    }
+
+    article {
+      display: grid;
+      grid-template-columns: 4.5rem minmax(0, 1fr);
+      gap: clamp(1rem, 3vw, 2rem);
+      padding: clamp(1.75rem, 4vw, 2.5rem) 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .number {
+      color: var(--orange);
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding-top: 0.18rem;
+    }
+
+    h2 {
+      font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+      line-height: 1.22;
+      margin-bottom: 0.75rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(232, 104, 26, 0.28);
+      border-radius: 999px;
+      color: var(--orange);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.8rem;
+      padding: 0.26rem 0.55rem;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 72ch;
+    }
+
+    p + p {
+      margin-top: 0.85rem;
+    }
+
+    strong {
+      color: var(--navy);
+      font-weight: 650;
+    }
+
+    .source {
+      margin-top: 1rem;
+      font-size: 0.94rem;
+    }
+
+    .closing {
+      margin-top: clamp(2.5rem, 6vw, 4rem);
+      max-width: 68ch;
+    }
+
+    .closing p {
+      color: var(--navy-mid);
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      background: var(--bg-dark);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(100% - 2rem, 980px);
+      }
+
+      .header-inner,
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .logo img {
+        height: 50px;
+      }
+
+      article {
+        grid-template-columns: 1fr;
+      }
+
+      .number {
+        padding-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell header-inner">
+      <a class="logo" href="/" aria-label="Retour a l'accueil BonGest">
+        <img src="../../assets/logo-bongest.png?v=20260413-2" alt="BonGest">
+      </a>
+      <div class="section-label">Digest prive</div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <p class="issue-kicker">Semaine du 15 juin 2026</p>
+    <h1>L'Essentiel BonGest</h1>
+    <p class="intro">Voici l'essentiel de la semaine pour les entreprises du batiment, les metiers techniques et les entreprises generales. Pas tout ce qui bouge, seulement ce qui peut vraiment valoir un coup d'oeil.</p>
+
+    <div class="issue-meta" aria-label="Informations de l'edition">
+      <span class="pill">Geneve et Vaud</span>
+      <span class="pill">7 infos utiles</span>
+      <span class="pill">Batiment, chantier, technique</span>
+    </div>
+
+    <section class="digest-list" aria-label="Selection de la semaine">
+      <article>
+        <div class="number">01</div>
+        <div>
+          <span class="tag">REGLE</span>
+          <h2>PAC et froid: nouvelles prescriptions OFEV a preparer pour 2027</h2>
+          <p>L'OFEV clarifie les nouvelles prescriptions pour les installations de refrigeration et les pompes a chaleur. Elles doivent s'appliquer des 2027, donc les projets 2026/2027 sont deja concernes.</p>
+          <p><strong>A retenir:</strong> pour les chauffagistes, frigoristes et planificateurs, le sujet touche le choix des installations, la conformite technique et la maniere d'expliquer les solutions aux clients.</p>
+          <p><strong>Action:</strong> faire suivre a la personne qui prepare les offres PAC, froid ou ventilation, et verifier si les modeles d'offre doivent etre adaptes.</p>
+          <p class="source"><strong>Source:</strong> <a href="https://suissetec.ch/fr/news-detail-fr/ofev-etat-actuel-de-la-technique-pour-les-installations-de-refrigeration-et-les-pompes-a-chaleur.html">suissetec / OFEV</a></p>
+        </div>
+      </article>
+
+      <article>
+        <div class="number">02</div>
+        <div>
+          <span class="tag">ACTU</span>
+          <h2>Geneve: liste OCIRT des entreprises en infraction mise a jour</h2>
+          <p>Geneve a remis a jour la liste OCIRT des entreprises en infraction. Avant de prendre un nouveau sous-traitant, c'est un petit controle qui peut eviter un gros probleme.</p>
+          <p><strong>A retenir:</strong> la liste couvre notamment les infractions aux usages de branche, aux regles sur les travailleurs detaches et au travail au noir. Elle est mise a jour regulierement et peut servir de reflexe avant une collaboration.</p>
+          <p><strong>Action:</strong> verifier la liste avant de signer avec un sous-traitant ou de repondre a un chantier avec partenaires externes.</p>
+          <p class="source"><strong>Source:</strong> <a href="https://www.ge.ch/document/liste-entreprises-infraction">ge.ch</a></p>
+        </div>
+      </article>
+
+      <article>
+        <div class="number">03</div>
+        <div>
+          <span class="tag">DELAI</span>
+          <h2>Geneve: appels d'offres actifs dans les metiers du batiment</h2>
+          <p>TenderLift signale 126 appels d'offres actifs a Geneve. Dans la liste: travaux de construction, electricite, sanitaire, serrurerie, peinture, chapes, renovation HPE et equipements pour sites publics.</p>
+          <p><strong>A retenir:</strong> plusieurs delais tombent entre fin juin et juillet, par exemple pour Geneve Aeroport, College Voltaire, Lancy, Meyrin et des projets scolaires.</p>
+          <p><strong>Action:</strong> scanner les lots proches du metier de l'entreprise et verifier ensuite l'annonce officielle sur SIMAP avant de preparer une reponse.</p>
+          <p class="source"><strong>Source:</strong> <a href="https://tenderlift.ch/tenders/geneva">TenderLift Geneve</a></p>
+        </div>
+      </article>
+
+      <article>
+        <div class="number">04</div>
+        <div>
+          <span class="tag">REGLE</span>
+          <h2>SIA 118: defauts caches, le delai de 60 jours change la routine</h2>
+          <p>Petit point juridique, gros effet pratique: depuis le 1er janvier 2026, les defauts caches ne fonctionnent plus avec l'ancienne logique de signalement immediat.</p>
+          <p><strong>A retenir:</strong> le delai legal devient 60 jours des la decouverte du defaut. Le complement SIA 118-C1:2026 adapte la norme SIA 118, mais il doit etre convenu par les parties.</p>
+          <p><strong>Action:</strong> revoir les modeles de contrats, receptions et courriers pour les contrats conclus apres le 1er janvier 2026.</p>
+          <p class="source"><strong>Source:</strong> <a href="https://shop.sia.ch/b67fbc96-94a0-4682-ba5f-470216ce32ce/D/DownloadAnhang">SIA</a></p>
+        </div>
+      </article>
+
+      <article>
+        <div class="number">05</div>
+        <div>
+          <span class="tag">DELAI</span>
+          <h2>Vaud: appels d'offres actifs, dont reseaux, electricite et CVC</h2>
+          <p>TenderLift signale 133 appels d'offres actifs dans le canton de Vaud. On y voit des travaux de construction, routes, reseaux, electricite, CVC, genie civil, reservoir, canalisations et renovation.</p>
+          <p><strong>A retenir:</strong> les delais visibles couvrent surtout fin juin et juillet, avec des projets a Lutry, EPFL, Aubonne, Lausanne, Chamossalaz et d'autres communes.</p>
+          <p><strong>Action:</strong> garder cette rubrique comme source d'opportunites, mais toujours verifier le dossier complet sur SIMAP avant d'investir du temps.</p>
+          <p class="source"><strong>Source:</strong> <a href="https://tenderlift.ch/tenders/vaud">TenderLift Vaud</a></p>
+        </div>
+      </article>
+
+      <article>
+        <div class="number">06</div>
+        <div>
+          <span class="tag">DELAI</span>
+          <h2>Vaud: revision LATC en consultation jusqu'au 30 juin</h2>
+          <p>Vaud consulte encore sur la revision de sa loi sur l'amenagement du territoire et les constructions. Pour les dossiers de permis, c'est un sujet a regarder avant la fin juin.</p>
+          <p><strong>A retenir:</strong> le projet parle d'accelerer les procedures, de numeriser davantage les permis, de fixer certains delais et d'integrer climat/biodiversite dans la planification.</p>
+          <p><strong>Action:</strong> si l'entreprise ou ses mandataires veulent reagir, la consultation est ouverte jusqu'au 30 juin 2026.</p>
+          <p class="source"><strong>Source:</strong> <a href="https://www.vd.ch/actualites/actualite/news/26147-avant-projet-de-revision-de-la-loi-sur-lamenagement-du-territoire-et-les-constructions-latc">vd.ch</a></p>
+        </div>
+      </article>
+
+      <article>
+        <div class="number">07</div>
+        <div>
+          <span class="tag">ACTU</span>
+          <h2>Vaud: le principe d'un salaire minimum cantonal est accepte</h2>
+          <p>Vaud a accepte le principe d'un salaire minimum cantonal dans la Constitution. Les textes concrets n'ont pas encore passe, donc le montant et les modalites restent a construire.</p>
+          <p><strong>A retenir:</strong> pour les entreprises, il n'y a pas encore de nouvelle fiche de paie a appliquer demain, mais le sujet va revenir vite avec les partenaires sociaux.</p>
+          <p><strong>Action:</strong> suivre la suite legislative, surtout pour les entreprises avec personnel de chantier, apprentis, auxiliaires ou salaires proches des minimums CCT.</p>
+          <p class="source"><strong>Source:</strong> <a href="https://www.vd.ch/actualites/actualite/news/26380-le-conseil-detat-prend-acte-de-lacceptation-du-principe-dun-salaire-minimum-cantonal">vd.ch</a></p>
+        </div>
+      </article>
+    </section>
+
+    <section class="closing" aria-label="Note BonGest">
+      <p><strong>Note BonGest:</strong> ce digest est une selection courte. L'objectif n'est pas de remplacer les sources officielles, mais de signaler les points a verifier rapidement avec les bons liens.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <div>BonGest - L'Essentiel BonGest</div>
+      <div class="footer-links">
+        <a href="/mentions-legales/">Mentions legales</a>
+        <a href="/confidentialite/">Confidentialite</a>
+        <a href="/">Accueil</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
